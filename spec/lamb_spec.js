@@ -12,23 +12,23 @@ describe('Lamb', function() {
     expect( lamb.say() ).toEqual('baaa');
   });
 
-  xit('can be silenced', function(){
+  it('can be silenced', function(){
     lamb.silence();
     expect( lamb.say() ).toBeFalsy();
   });
 
-  xit('has wool by default', function(){
+  it('has wool by default', function(){
     expect( lamb.hasWool() ).toBeTruthy();
   });
 
   describe('wool', function(){
-    xit('returns "3 bags full"', function(){
+    it('returns "3 bags full"', function(){
       expect( lamb.wool() ).toEqual('3 bags full');
     });
   });
 
   describe('sheer', function(){
-    xit('deducts a bag of wool', function(){
+    it('deducts a bag of wool', function(){
       lamb.sheer();
       expect( lamb.wool() ).toEqual('2 bags full');
     });
